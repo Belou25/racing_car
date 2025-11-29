@@ -1,0 +1,4 @@
+# .gitignore
+
+env_py311/
+video_demo/
