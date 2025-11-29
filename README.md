@@ -1,4 +1,4 @@
-# racing_car 🏎️
+# RACING_CAR 🏎️
 
 ##  🏁 Description
 Racing Car est un projet de Deep Reinforcement Learning (DRL) visant à entraîner un agent intelligent à maîtriser un environnement de conduite.
@@ -7,7 +7,6 @@ Racing Car est un projet de Deep Reinforcement Learning (DRL) visant à entraîn
 
 - Environnement : L'agent apprend à conduire dans l'environnement CarRacing-v3 de Gymnasium, qui simule une voiture vue de dessus sur un circuit généré de manière stochastique. L'agent doit apprendre à naviguer le plus rapidement possible tout en évitant de sortir de piste.
 
----
 ## ⭐️ Fonctionnalités et Architecture 
 Cette section détaille les choix techniques et l'implémentation spécifique de l'algorithme DQN pour l'environnement CarRacing-v3.
 
@@ -40,7 +39,6 @@ Le code est optimisé pour une exécution accélérée sur différentes architec
 
 - CPU (Générique) : Bascule automatique sur le CPU lorsque ni MPS ni CUDA n'est détecté.
 
----
 ## 🛠️ Prérequis et installation
 
 ### ⚙️ Prérequis Logiciels : 
@@ -86,7 +84,7 @@ source env/bin/activate
 ```bash
 pip install -r requirements.txt
 ```
----
+
 ## 🕹️ Utilisation et Entraînement
 ### Entraîner l'Agent
 Pour démarrer l'entraînement du modèle DQN : 
@@ -101,7 +99,7 @@ Pour lancer l'environnement avec la visualisation (render_mode="human") et teste
 python DQN_agent_test.py
 ```
 
----
+
 ## 🏛️ Structure du projet
 - `save_graph/`: dossier contenant les graphiques de suivi de score et de tuile visités par la voiture pour chaque épisode.
 - `weights_save/`: dossier contenant les poids du modèles entrainées (mis à jour tous les 25 épisodes).
@@ -110,7 +108,7 @@ python DQN_agent_test.py
 - `DQN_agent_train.py`: fichier python pour entraînement du modèle. 
 - `requirements.txt` : liste des frameworks utiles pour l'environemment. 
 
----
+
 ## 📈 Résultats 
 - **Graphiques de Convergence** : 
 ![Graphique score du modèle par épisodes](save_graph/racing_car3_score.png)
@@ -119,7 +117,7 @@ python DQN_agent_test.py
 - **Vidéo de démonstration du modèle sur 9 circuits aléatoires** :
 [![Vidéo de démonstration du modèle](https://img.youtube.com/vi/nw7CA66YZHk/hqdefault.jpg)](https://www.youtube.com/watch?v=nw7CA66YZHk)
 
----
+
 ## 💾 Détails de l'Entraînement Initial (Poids Fournis)
 Les poids du modèle pré-entraîné (`model3_weights.pth`) fournis dans ce dépôt ont été générés dans l'environnement matériel suivant :
 
@@ -133,7 +131,7 @@ Les poids du modèle pré-entraîné (`model3_weights.pth`) fournis dans ce dép
 
 - Batch Size Utilisé : L'entraînement a été effectué avec un petit batch size de 32 pour rester dans la limite des 8 Go de VRAM et garantir la stabilité.
 
----
+
 ## 💡 Recommendation pour un Nouvel Entraînement 
 
 Pour quiconque souhaite réentraîner l'agent sur une machine différente, il est essentiel d'ajuster les hyperparamètres et de surveiller l'utilisation du matériel pour maximiser l'efficacité.
@@ -151,9 +149,10 @@ Lorsque vous augmentez le `Batch Size`, le gradient de la fonction de perte devi
 Pour vous assurer que vous utilisez au maximum la puissance de votre carte graphique sans dépasser la mémoire, vous devez viser une saturation du GPU/VRAM de 90% ou plus.
 
 - Windows : Gestionnaire des tâches.
-- MacOS : ```bash sudo powermetrics --samplers cpu_power,gpu_power -i 500```.
+- MacOS :
+```bash 
+sudo powermetrics --samplers cpu_power,gpu_power -i 500
+```
 
----
 ## 🙋‍♂️ Auteur
-- Erwan Gouriou
----
+- Erwan GOURIOU
